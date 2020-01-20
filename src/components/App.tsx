@@ -21,6 +21,9 @@ class _App extends Component<AppProps, AppState> {
     this.state = { fetching: false };
   }
 
+  // or could skip constructor and AppState entirely, and instead have :
+  // state: {fetching: false}
+
   componentDidUpdate(prevProps: AppProps): void {
     if (!prevProps.todos.length && this.props.todos.length) {
       this.setState({ fetching: false });
